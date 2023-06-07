@@ -118,7 +118,7 @@ ApplicationWindow {
 					Label {
 						anchors.centerIn: parent
 						color: parent.checked ? '#00ADDC' : '#848286'
-						text: translator.translate(qsTr('AUTO'), translator.language)
+						text: translator.translate(qsTr('PLUTO'), translator.language)
 						font.pixelSize: parent.height / 3
 					}
 					onCheckedChanged: {
