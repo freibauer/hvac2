@@ -42,7 +42,7 @@ ListView {
         verticalAlignment: Label.AlignVCenter
         text: model.modelData
         font.pixelSize: height * 0.7
-        color: (ListView.view.enabled && ListView.isCurrentItem) ? '#00ADDC' : 'white'
+        color: (ListView.view.enabled && ListView.isCurrentItem) ? '#FF0000' : 'white'
     }
 
     preferredHighlightBegin: 0.5
