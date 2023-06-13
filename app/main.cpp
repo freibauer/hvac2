@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QDebug>
@@ -23,9 +25,28 @@
 
 #include "translator.h"
 
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int test () 
+{
+  ofstream outfile ("/tmp/temp.txt");
+  outfile << "Line 1\n";
+  outfile << "Line 2\n";
+  outfile.close();
+  string line;
+  ifstream infile ("/tmp/temp.txt");
+  while ( getline (infile,line) ) { cout << line << '\n'; }
+  infile.close();
+  return 0;
+}
+
+
 int main(int argc, char *argv[])
 {
 	setenv("QT_QUICK_CONTROLS_STYLE", "AGL", 1);
+	test();
 
 	QGuiApplication app(argc, argv);
 
